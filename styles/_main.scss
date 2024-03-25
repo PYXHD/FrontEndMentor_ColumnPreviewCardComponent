@@ -1,0 +1,108 @@
+main {
+  max-width: 1100px;
+
+  .card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 10px;
+    background: blue;
+    overflow: hidden;
+    margin: 20px;
+
+    @media screen and (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .subcard {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 40px;
+      padding: 14% 28% 14% 14%;
+
+      @media screen and (max-width: 768px) {
+        padding: 15%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      @media screen and (max-width: 425px) {
+        padding: 15%;
+        justify-content: space-between;
+        align-items: start;
+        text-align: start;
+      }
+
+      img {
+        width: 72px;
+      }
+
+      h2 {
+        font-family: $fontTitle;
+        font-size: 3rem;
+        text-transform: uppercase;
+        color: $lightGray;
+      }
+
+      p {
+        font-family: $fontText;
+        font-size: 1rem;
+        color: $transparentWhite;
+        line-height: 25px;
+      }
+
+      button {
+        min-width: 50%;
+        max-width: 185px;
+        background: $lightGray;
+        border: none;
+        border-radius: 40px;
+        margin-top: 60px;
+        padding: 15px;
+        font-family: $fontText;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: 0.2s ease;
+
+        &:hover,
+        &:active {
+          background: none;
+          color: $transparentWhite;
+          outline: 3px solid $transparentWhite;
+        }
+
+        @media screen and (max-width: 425px) {
+          width: 150px;
+          margin-top: 0;
+        }
+      }
+    }
+
+    .sedans-container {
+      background: $bgSedans;
+      overflow: hidden;
+
+      .sedan-btn {
+        color: $bgSedans;
+      }
+    }
+
+    .suvs-container {
+      background: $bgSUV;
+
+      .sedan-btn {
+        color: $bgSUV;
+      }
+    }
+
+    .luxury-container {
+      background: $bgLuxury;
+
+      .luxury-btn {
+        color: $bgLuxury;
+      }
+    }
+  }
+}
